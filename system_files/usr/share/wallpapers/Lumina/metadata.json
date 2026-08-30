@@ -1,0 +1,12 @@
+{
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Lumina Linux Project"
+      }
+    ],
+    "Id": "Lumina",
+    "License": "CC-BY-SA-4.0",
+    "Name": "Lumina Waves"
+  }
+}

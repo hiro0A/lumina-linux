@@ -1,0 +1,11 @@
+MIGRAÇÃO SEGURA DO CHROME
+
+1. No Windows, confirme em chrome://settings/account que favoritos, senhas,
+   extensões, configurações, histórico e abas estão salvos na Conta Google.
+2. Exporte uma cópia dos favoritos em HTML.
+3. Confirme as senhas em https://passwords.google.com.
+4. Preserve uma cópia offline de "User Data", mas não a restaure inteira no
+   Linux: cookies e credenciais locais podem depender da criptografia do Windows.
+5. No Linux, instale/abra o Chrome e entre na mesma Conta Google.
+6. Importe manualmente apenas o que não tiver sido restaurado pela conta.
+

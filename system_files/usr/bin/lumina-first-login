@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -u
+
+state_dir="${XDG_CONFIG_HOME:-${HOME}/.config}/lumina"
+marker="${state_dir}/appearance-v1"
+
+if [[ -e "${marker}" ]]; then
+    exit 0
+fi
+
+mkdir -p "${state_dir}"
+
+if ! command -v plasma-apply-lookandfeel >/dev/null 2>&1; then
+    exit 0
+fi
+
+if ! plasma-apply-lookandfeel --apply org.lumina.desktop --resetLayout; then
+    exit 0
+fi
+
+if command -v plasma-apply-wallpaperimage >/dev/null 2>&1; then
+    plasma-apply-wallpaperimage /usr/share/wallpapers/Lumina/contents/images/3840x2160.png || true
+fi
+
+touch "${marker}"
+
+if command -v notify-send >/dev/null 2>&1; then
+    notify-send "Lumina Linux" "Visual Lumina aplicado. Os aplicativos opcionais serão instalados automaticamente."
+fi

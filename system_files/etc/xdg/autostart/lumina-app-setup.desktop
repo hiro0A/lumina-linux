@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Aplicativos iniciais do Lumina
+Comment=Instala os aplicativos opcionais do usuário pelo Flathub
+Exec=/usr/bin/lumina-first-setup
+OnlyShowIn=KDE;
+NoDisplay=true
+X-KDE-autostart-after=panel

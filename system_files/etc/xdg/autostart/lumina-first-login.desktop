@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Configuração visual do Lumina
+Comment=Aplica o tema e a organização inicial do Lumina Linux
+Exec=/usr/bin/lumina-first-login
+OnlyShowIn=KDE;
+NoDisplay=true
+X-KDE-autostart-after=panel

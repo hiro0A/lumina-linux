@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+state_dir="${XDG_CONFIG_HOME:-${HOME}/.config}/lumina"
+marker="${state_dir}/apps-v1"
+
+if [[ -e "${marker}" ]]; then
+  exit 0
+fi
+
+mkdir -p "${state_dir}"
+
+echo "Lumina Linux - configuração inicial"
+echo "Instalando aplicativos opcionais pelo Flathub..."
+
+flatpak remote-add --user --if-not-exists flathub \
+  https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install --user --noninteractive flathub \
+  com.google.Chrome \
+  com.jetbrains.PyCharm-Professional \
+  com.github.tchx84.Flatseal \
+  com.usebottles.bottles \
+  com.heroicgameslauncher.hgl
+
+touch "${marker}"
+
+echo
+echo "Aplicativos instalados."
+echo "Entre no Chrome com sua Conta Google para restaurar os dados sincronizados."
+echo "A Steam e o Proton já são fornecidos pela base Bazzite."
+
+if command -v notify-send >/dev/null 2>&1; then
+  notify-send "Lumina Linux" "Chrome, PyCharm, Flatseal, Bottles e Heroic foram instalados."
+fi

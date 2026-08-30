@@ -1,0 +1,7 @@
+cosign.key
+windows/preinstall-report.json
+_build_*
+output
+_build-*/**
+*_chunkah_*
+*_rpm-ostree_*

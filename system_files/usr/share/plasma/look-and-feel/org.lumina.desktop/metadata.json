@@ -1,0 +1,18 @@
+{
+  "KPackageStructure": "Plasma/LookAndFeel",
+  "KPlugin": {
+    "Authors": [
+      {
+        "Name": "Lumina Linux Project"
+      }
+    ],
+    "Category": "",
+    "Description": "Lumina desktop layout based on KDE Plasma and Breeze",
+    "Id": "org.lumina.desktop",
+    "License": "GPL-2.0-or-later",
+    "Name": "Lumina",
+    "Version": "1.0",
+    "Website": "https://github.com/hiro0A/lumina-linux"
+  },
+  "X-Plasma-APIVersion": "2"
+}
